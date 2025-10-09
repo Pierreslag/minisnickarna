@@ -76,60 +76,62 @@
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="relative overflow-hidden scroll-mt-24" id="top">
-    <div class="absolute inset-0 -z-10 bg-[radial-gradient(60rem_60rem_at_50%_-10%,rgba(253,230,138,0.6),transparent_40%)] dark:bg-[radial-gradient(60rem_60rem_at_50%_-10%,rgba(253,230,138,0.15),transparent_40%)]"></div>
-    <div class="mx-auto max-w-6xl px-4 py-16 sm:py-24 grid lg:grid-cols-2 gap-10 items-center">
-      <div>
-        <div class="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200 ring-1 ring-emerald-300/60 mb-4">
-          🛡️ Barnvänligt • FSC-trä • Giftfria färger
-        </div>
-        <h1 class="text-4xl sm:text-5xl font-black tracking-tight leading-[1.1]">
-          Bygg, lek och lär – <span class="text-amber-600">på riktigt</span>!
-        </h1>
-        <p class="mt-4 text-base sm:text-lg text-zinc-600 dark:text-zinc-300 max-w-prose">
-          MiniSnickarna är prenumerationsboxen som levererar byggglädje hem till dörren. Varje månad får barnen ett nytt, säkert projekt i trä, kartong och färg – med tydliga steg och videoguider.
-        </p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#boxar" class="inline-flex items-center gap-2 rounded-xl px-4 py-2 font-semibold bg-amber-500 hover:bg-amber-600 text-amber-950 shadow">
-            Utforska boxar 🔨
-          </a>
-          <a href="#priser" class="inline-flex items-center gap-2 rounded-xl px-4 py-2 font-semibold border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800">
-            Priser 🛒
-          </a>
-        </div>
-        <ul class="mt-6 flex flex-wrap gap-4 text-sm text-zinc-600 dark:text-zinc-300">
-          <li class="inline-flex items-center gap-2">♻️ Återvunna förpackningar</li>
-          <li class="inline-flex items-center gap-2">👶 Inga smådelar &lt; 3 år</li>
-          <li class="inline-flex items-center gap-2">☀️ Vattenbaserade färger</li>
-        </ul>
+<!-- Hero (med "Så funkar det" till höger) -->
+<section class="relative overflow-hidden scroll-mt-24" id="top">
+  <div class="absolute inset-0 -z-10 bg-[radial-gradient(60rem_60rem_at_50%_-10%,rgba(253,230,138,0.6),transparent_40%)] dark:bg-[radial-gradient(60rem_60rem_at_50%_-10%,rgba(253,230,138,0.15),transparent_40%)]"></div>
+  <div class="mx-auto max-w-6xl px-4 py-16 sm:py-24 grid lg:grid-cols-2 gap-10 items-start">
+    <!-- Vänster: rubrik + CTA -->
+    <div>
+      <div class="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200 ring-1 ring-emerald-300/60 mb-4">
+        🛡️ Barnvänligt • FSC-trä • Giftfria färger
       </div>
+      <h1 class="text-4xl sm:text-5xl font-black tracking-tight leading-[1.1]">
+        Bygg, lek och lär – <span class="text-amber-600">på riktigt</span>!
+      </h1>
+      <p class="mt-4 text-base sm:text-lg text-zinc-600 dark:text-zinc-300 max-w-prose">
+        MiniSnickarna är prenumerationsboxen som levererar byggglädje hem till dörren. Varje månad får barnen ett nytt, säkert projekt i trä, kartong och färg – med tydliga steg och videoguider.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href="#boxar" class="inline-flex items-center gap-2 rounded-xl px-4 py-2 font-semibold bg-amber-500 hover:bg-amber-600 text-amber-950 shadow">
+          Utforska boxar 🔨
+        </a>
+        <a href="#priser" class="inline-flex items-center gap-2 rounded-xl px-4 py-2 font-semibold border border-zinc-300 dark:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-zinc-800">
+          Priser 🛒
+        </a>
+      </div>
+      <ul class="mt-6 flex flex-wrap gap-4 text-sm text-zinc-600 dark:text-zinc-300">
+        <li class="inline-flex items-center gap-2">♻️ Återvunna förpackningar</li>
+        <li class="inline-flex items-center gap-2">👶 Inga smådelar &lt; 3 år</li>
+        <li class="inline-flex items-center gap-2">☀️ Vattenbaserade färger</li>
+      </ul>
     </div>
-  </section>
 
-  <!-- Features -->
-  <section class="mx-auto max-w-6xl px-4 py-14 scroll-mt-24" id="sa-funkar-det">
-    <h2 class="text-2xl sm:text-3xl font-black">Så funkar det</h2>
-    <p class="mt-2 text-zinc-600 dark:text-zinc-300 max-w-prose">Välj prenumeration, få hem en box varje månad och bygg tillsammans. Varje projekt har tydliga steg och en kort videoguide via QR-kod.</p>
-    <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <!-- Höger: Så funkar det (flyttad hit) -->
+    <div id="sa-funkar-det" class="grid sm:grid-cols-2 gap-4">
       <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 p-5 card shadow-sm">
         <div class="h-10 w-10 rounded-xl grid place-items-center bg-amber-100 text-amber-900">📦</div>
-        <h3 class="mt-4 font-bold text-lg">Välj box</h3><p class="mt-1 text-sm text-zinc-600 dark:text-zinc-300">1 eller 2 gånger i månaden – enkelt att pausa.</p>
+        <h3 class="mt-4 font-bold text-lg">Välj box</h3>
+        <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-300">1 eller 2 gånger i månaden – enkelt att pausa.</p>
       </div>
       <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 p-5 card shadow-sm">
         <div class="h-10 w-10 rounded-xl grid place-items-center bg-amber-100 text-amber-900">🛡️</div>
-        <h3 class="mt-4 font-bold text-lg">Säkert</h3><p class="mt-1 text-sm text-zinc-600 dark:text-zinc-300">FSC-trä, vattenbaserad färg, inga smådelar &lt; 3 år.</p>
+        <h3 class="mt-4 font-bold text-lg">Säkert</h3>
+        <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-300">FSC-trä, vattenbaserad färg, inga smådelar &lt; 3 år.</p>
       </div>
       <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 p-5 card shadow-sm">
         <div class="h-10 w-10 rounded-xl grid place-items-center bg-amber-100 text-amber-900">🖌️</div>
-        <h3 class="mt-4 font-bold text-lg">Skapa</h3><p class="mt-1 text-sm text-zinc-600 dark:text-zinc-300">Måla, skruva, bygg. Instruktioner i barnens takt.</p>
+        <h3 class="mt-4 font-bold text-lg">Skapa</h3>
+        <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-300">Måla, skruva, bygg. Instruktioner i barnens takt.</p>
       </div>
       <div class="rounded-2xl border border-zinc-200 dark:border-zinc-800 p-5 card shadow-sm">
         <div class="h-10 w-10 rounded-xl grid place-items-center bg-amber-100 text-amber-900">✨</div>
-        <h3 class="mt-4 font-bold text-lg">Stolthet</h3><p class="mt-1 text-sm text-zinc-600 dark:text-zinc-300">Känslan av att ha byggt något på riktigt!</p>
+        <h3 class="mt-4 font-bold text-lg">Stolthet</h3>
+        <p class="mt-1 text-sm text-zinc-600 dark:text-zinc-300">Känslan av att ha byggt något på riktigt!</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Boxes -->
   <section class="mx-auto max-w-6xl px-4 py-14 scroll-mt-24" id="boxar">
