@@ -4,27 +4,57 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MiniSnickarna – Bygg, lek och lär</title>
+
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- SEO / Social -->
+  <meta name="description" content="MiniSnickarna är prenumerationsboxen där barn bygger på riktigt – säkra material, tydliga steg och videoguider.">
+  <meta property="og:title" content="MiniSnickarna – Bygg, lek och lär">
+  <meta property="og:description" content="Byggglädje hem till dörren. FSC-trä, vattenbaserade färger och tydliga steg.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/og-image.jpg">
+  <meta property="og:url" content="https://minisnickarna.se/">
+  <link rel="icon" href="assets/favicon.ico">
+
   <meta name="color-scheme" content="light dark">
+
   <style>
     .card{background:rgba(255,255,255,.7)}
     @media (prefers-color-scheme: dark){
       .card{background:rgba(24,24,27,.4)}
     }
+    /* Smooth scroll men respektera reduced motion */
+    html{scroll-behavior:smooth}
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+    }
   </style>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"MiniSnickarna",
+    "url":"https://minisnickarna.se/",
+    "logo":"https://minisnickarna.se/assets/logo.svg",
+    "sameAs":[]
+  }
+  </script>
 </head>
 <body class="min-h-screen bg-white text-zinc-900 dark:bg-zinc-950 dark:text-zinc-50 selection:bg-amber-200">
   <!-- Nav -->
   <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-zinc-900/60 border-b border-zinc-200 dark:border-zinc-800">
     <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-      <div class="flex items-center gap-2">
+      <a href="#" class="flex items-center gap-2" aria-label="MiniSnickarna startsida">
         <div class="relative h-10 w-10 grid place-items-center rounded-2xl shadow-md" style="background:linear-gradient(135deg,#FCD34D,#F59E0B)">
-          <img src="assets/logo.svg" alt="MiniSnickarna" class="h-8 w-8">
-          <span class="absolute -right-1 -bottom-1 rounded-full bg-emerald-500 p-1 shadow hidden sm:block">✨</span>
+          <img src="assets/logo.svg" alt="MiniSnickarna" class="h-8 w-8" loading="lazy" decoding="async">
+          <span class="absolute -right-1 -bottom-1 rounded-full bg-emerald-500 p-1 shadow hidden sm:block" aria-hidden="true">✨</span>
         </div>
         <span class="font-black text-xl sm:text-2xl tracking-tight">MiniSnickarna</span>
-      </div>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm" aria-label="Huvudmeny">
         <a href="#boxar" class="hover:opacity-80">Boxar</a>
         <a href="#sa-funkar-det" class="hover:opacity-80">Så funkar det</a>
         <a href="#priser" class="hover:opacity-80">Priser</a>
@@ -37,7 +67,7 @@
   </header>
 
   <!-- Hero -->
-  <section class="relative overflow-hidden">
+  <section class="relative overflow-hidden scroll-mt-24" id="top">
     <div class="absolute inset-0 -z-10 bg-[radial-gradient(60rem_60rem_at_50%_-10%,rgba(253,230,138,0.6),transparent_40%)] dark:bg-[radial-gradient(60rem_60rem_at_50%_-10%,rgba(253,230,138,0.15),transparent_40%)]"></div>
     <div class="mx-auto max-w-6xl px-4 py-16 sm:py-24 grid lg:grid-cols-2 gap-10 items-center">
       <div>
@@ -67,17 +97,17 @@
       <div class="relative">
         <div class="aspect-[4/3] rounded-3xl overflow-hidden shadow-xl ring-1 ring-zinc-200 dark:ring-zinc-800 bg-gradient-to-br from-amber-100 to-emerald-100 dark:from-zinc-800 dark:to-zinc-700 grid place-items-center">
           <div class="grid grid-cols-3 gap-3 p-6 w-full">
-            <div class="rounded-2xl bg-gradient-to-br from-amber-300 to-white/70 dark:to-zinc-700 aspect-square ring-1 ring-black/5 dark:ring-white/5 grid place-items-center">🔨</div>
-            <div class="rounded-2xl bg-gradient-to-br from-sky-300 to-white/70 dark:to-zinc-700 aspect-square ring-1 ring-black/5 dark:ring-white/5 grid place-items-center">🖌️</div>
-            <div class="rounded-2xl bg-gradient-to-br from-emerald-300 to-white/70 dark:to-zinc-700 aspect-square ring-1 ring-black/5 dark:ring-white/5 grid place-items-center">🔨</div>
-            <div class="rounded-2xl bg-gradient-to-br from-fuchsia-300 to-white/70 dark:to-zinc-700 aspect-square ring-1 ring-black/5 dark:ring-white/5 grid place-items-center">🖌️</div>
-            <div class="rounded-2xl bg-gradient-to-br from-rose-300 to-white/70 dark:to-zinc-700 aspect-square ring-1 ring-black/5 dark:ring-white/5 grid place-items-center">🔨</div>
-            <div class="rounded-2xl bg-gradient-to-br from-indigo-300 to-white/70 dark:to-zinc-700 aspect-square ring-1 ring-black/5 dark:ring-white/5 grid place-items-center">🖌️</div>
+            <div class="rounded-2xl bg-gradient-to-br from-amber-300 to-white/70 dark:to-zinc-700 aspect-square ring-1 ring-black/5 dark:ring-white/5 grid place-items-center" aria-hidden="true">🔨</div>
+            <div class="rounded-2xl bg-gradient-to-br from-sky-300 to-white/70 dark:to-zinc-700 aspect-square ring-1 ring-black/5 dark:ring-white/5 grid place-items-center" aria-hidden="true">🖌️</div>
+            <div class="rounded-2xl bg-gradient-to-br from-emerald-300 to-white/70 dark:to-zinc-700 aspect-square ring-1 ring-black/5 dark:ring-white/5 grid place-items-center" aria-hidden="true">🔨</div>
+            <div class="rounded-2xl bg-gradient-to-br from-fuchsia-300 to-white/70 dark:to-zinc-700 aspect-square ring-1 ring-black/5 dark:ring-white/5 grid place-items-center" aria-hidden="true">🖌️</div>
+            <div class="rounded-2xl bg-gradient-to-br from-rose-300 to-white/70 dark:to-zinc-700 aspect-square ring-1 ring-black/5 dark:ring-white/5 grid place-items-center" aria-hidden="true">🔨</div>
+            <div class="rounded-2xl bg-gradient-to-br from-indigo-300 to-white/70 dark:to-zinc-700 aspect-square ring-1 ring-black/5 dark:ring-white/5 grid place-items-center" aria-hidden="true">🖌️</div>
           </div>
           <div class="absolute left-3 top-3 rounded-full bg-white/80 dark:bg-zinc-900/60 px-3 py-1 text-xs font-medium shadow border border-zinc-200 dark:border-zinc-700 inline-flex items-center gap-2">
             📦 Månadens box
           </div>
-          <button class="absolute right-3 bottom-3 inline-flex items-center gap-2 rounded-xl bg-white/90 dark:bg-zinc-900/70 px-3 py-1.5 text-xs font-semibold shadow border border-zinc-200 dark:border-zinc-700">
+          <button id="videoguide" class="absolute right-3 bottom-3 inline-flex items-center gap-2 rounded-xl bg-white/90 dark:bg-zinc-900/70 px-3 py-1.5 text-xs font-semibold shadow border border-zinc-200 dark:border-zinc-700">
             ▶️ Se videoguide
           </button>
         </div>
@@ -86,7 +116,7 @@
   </section>
 
   <!-- Features -->
-  <section class="mx-auto max-w-6xl px-4 py-14" id="sa-funkar-det">
+  <section class="mx-auto max-w-6xl px-4 py-14 scroll-mt-24" id="sa-funkar-det">
     <h2 class="text-2xl sm:text-3xl font-black">Så funkar det</h2>
     <p class="mt-2 text-zinc-600 dark:text-zinc-300 max-w-prose">Välj prenumeration, få hem en box varje månad och bygg tillsammans. Varje projekt har tydliga steg och en kort videoguide via QR-kod.</p>
     <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -110,7 +140,7 @@
   </section>
 
   <!-- Boxes -->
-  <section class="mx-auto max-w-6xl px-4 py-14" id="boxar">
+  <section class="mx-auto max-w-6xl px-4 py-14 scroll-mt-24" id="boxar">
     <div class="flex items-end justify-between gap-6">
       <div>
         <h2 class="text-2xl sm:text-3xl font-black">Månadens boxar</h2>
@@ -187,7 +217,7 @@
   </section>
 
   <!-- Pricing -->
-  <section class="mx-auto max-w-6xl px-4 py-14" id="priser">
+  <section class="mx-auto max-w-6xl px-4 py-14 scroll-mt-24" id="priser">
     <h2 class="text-2xl sm:text-3xl font-black">Priser & paket</h2>
     <p class="mt-2 text-zinc-600 dark:text-zinc-300 max-w-prose">Börja enkelt. Du kan pausa eller byta när som helst. Frakt ingår i alla prenumerationer.</p>
     <div class="mt-8 grid md:grid-cols-3 gap-5">
@@ -247,7 +277,7 @@
     <div class="mx-auto max-w-6xl px-4 py-10 grid md:grid-cols-3 gap-8" id="kontakt">
       <div>
         <div class="flex items-center gap-2">
-          <img src="assets/logo.svg" alt="MiniSnickarna" class="h-10 w-10 rounded-2xl shadow-md">
+          <img src="assets/logo.svg" alt="MiniSnickarna" class="h-10 w-10 rounded-2xl shadow-md" loading="lazy" decoding="async">
           <span class="font-black text-xl sm:text-2xl tracking-tight">MiniSnickarna</span>
         </div>
         <p class="mt-3 text-sm text-zinc-600 dark:text-zinc-300 max-w-xs">Prenumerationsboxen där barn bygger på riktigt. Trygga material och enkla steg, varje månad.</p>
@@ -270,8 +300,18 @@
   </footer>
 
 <script>
-  // Set current year
+  // År i footern
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Videoguide-knapp (byt URL)
+  document.getElementById('videoguide')?.addEventListener('click', () => {
+    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank', 'noopener,noreferrer');
+  });
+
+  // För äldre iOS/Safari som inte respekterar anchor-offset: lägg scroll-margin på flygande sätt
+  for (const el of document.querySelectorAll('section[id]')) {
+    el.classList.add('scroll-mt-24');
+  }
 </script>
 </body>
 </html>
